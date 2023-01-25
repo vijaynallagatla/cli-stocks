@@ -1,4 +1,4 @@
-# cli_stocks
+# Yahoo Finance CLI tool
 Cli Tool for stock exchange quick peek
 
 ## OpenAPI specs sources

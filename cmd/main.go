@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	yapi "github.com/vijaynallagatla/cli_stocks/gen/client"
+	"github.com/vijaynallagatla/cli_stocks/client"
 	"net/http"
 )
 

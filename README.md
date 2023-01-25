@@ -12,3 +12,4 @@ You can run using following command
 ```code
 go run ./cmd/main.go -s AAPL
 ```
+![img.png](img.png)

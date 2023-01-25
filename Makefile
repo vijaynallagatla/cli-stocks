@@ -18,3 +18,7 @@ generate-go-sdk: | clean
 		-v `pwd`:/workspace \
 		openapitools/openapi-generator-cli:v${OPENAPI_VERSION} \
 		generate -i /workspace/openapi/specs.yaml -g go -o /workspace/yapi -c /workspace/openapi/config.yaml --git-repo-id cli-stocks/yapi --git-user-id vijaynallagatla
+
+.PHONY: build
+build:
+	CGO_ENABLED=0 go build -v -ldflags='-s -w' -trimpath ./cmd/cstock

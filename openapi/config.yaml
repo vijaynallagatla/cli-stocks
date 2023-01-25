@@ -1,3 +1,3 @@
-packageName: client
-isGoSubmodule: true
+packageName: yapi
+isGoSubmodule: false
 enumClassPrefix: true

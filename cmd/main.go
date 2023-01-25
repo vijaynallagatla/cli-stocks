@@ -2,7 +2,9 @@ package main
 
 import (
 	"context"
-	cli "github.com/vijaynallagatla/cli-stocks/client"
+	"flag"
+	"fmt"
+	cli "github.com/vijaynallagatla/cli-stocks/yapi"
 	"net/http"
 )
 
@@ -10,10 +12,12 @@ func main() {
 	cfg := cli.NewConfiguration()
 	client := cli.NewAPIClient(cfg)
 
-	res, httpStatus, err := client.QuoteApi.GetQuote(context.Background()).Symbols("AAPL").Execute()
-	if err != nil {
-		panic(err)
-	}
+	// Parse symbols through cli args -s for symbol and use .NS or . for changing the stock exchange
+	symbol := flag.String("s", "AAPL", "Stock Symbol")
+	flag.Parse()
+
+	// Ignoring err since there could be marshalling issue with some response object
+	res, httpStatus, _ := client.QuoteApi.GetQuote(context.Background()).Symbols(*symbol).Execute()
 
 	if httpStatus != nil {
 		if httpStatus.StatusCode != http.StatusOK {
@@ -21,12 +25,12 @@ func main() {
 		}
 	}
 
-	r, ok := res.GetQuoteResponseOk()
+	quote, ok := res.GetQuoteResponseOk()
 	if !ok {
-		panic(err)
+		panic("error getting response")
 	}
 
-	if r != nil {
-		panic(r)
+	for _, stock := range quote.GetResult() {
+		fmt.Printf(" Stock Name: %v \n Current Value: %v\n", stock.GetShortName(), stock.GetRegularMarketPrice())
 	}
 }

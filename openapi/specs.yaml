@@ -409,14 +409,8 @@ components:
               type: string
               example: '2574.57'
         regularMarketPrice:
-          type: object
-          properties:
-            raw:
-              type: number
-              example: 4019.87
-            fmt:
-              type: string
-              example: '4019.87'
+          type: number
+          example: 2574.57
         market:
           type: string
           example: us_market

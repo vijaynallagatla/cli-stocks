@@ -1,4 +1,4 @@
-module github.com/vijaynallagatla/cli_stocks/client/yapi
+module github.com/vijaynallagatla/cli_stocks/client/client
 
 go 1.13
 

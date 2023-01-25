@@ -1,4 +1,4 @@
-module github.com/vijaynallagatla/cli_stocks
+module github.com/vijaynallagatla/cli-stocks
 
 go 1.19
 

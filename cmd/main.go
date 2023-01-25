@@ -2,13 +2,13 @@ package main
 
 import (
 	"context"
-	"github.com/vijaynallagatla/cli_stocks/client"
+	cli "github.com/vijaynallagatla/cli-stocks/client"
 	"net/http"
 )
 
 func main() {
-	cfg := yapi.NewConfiguration()
-	client := yapi.NewAPIClient(cfg)
+	cfg := cli.NewConfiguration()
+	client := cli.NewAPIClient(cfg)
 
 	res, httpStatus, err := client.QuoteApi.GetQuote(context.Background()).Symbols("AAPL").Execute()
 	if err != nil {

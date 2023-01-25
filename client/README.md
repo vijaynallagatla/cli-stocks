@@ -1,4 +1,4 @@
-# Go API client for yapi
+# Go API client for client
 
 Yahoo Finance API specification
 
@@ -23,7 +23,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```golang
-import sw "./yapi"
+import sw "./client"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:

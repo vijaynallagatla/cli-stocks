@@ -1,6 +1,23 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "assigneesFromCodeOwners": true,
   "extends": [
-    "config:base"
-  ]
+    "config:base",
+    "schedule:weekly"
+  ],
+  "branchPrefix": "renovate-",
+  "commitMessagePrefix": "[chore/dependency] Update {{depName}}",
+  "labels": ["renovate", "dependencies"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major","minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ],
+  "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"],
+  "prHourlyLimit": 3,
+  "prConcurrentLimit": 5,
+  "gomod": {
+    "enabled": true
+  },
+  "rangeStrategy": "pin"
 }

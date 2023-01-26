@@ -5,7 +5,7 @@
     "schedule:weekly"
   ],
   "branchPrefix": "renovate-",
-  "commitMessagePrefix": "[chore/dependency] Update {{depName}}",
+  "commitMessagePrefix": "[chore/dependency] ",
   "labels": ["renovate", "dependencies"],
   "packageRules": [
     {

@@ -22,3 +22,8 @@ generate-go-sdk: | clean
 .PHONY: build
 build:
 	CGO_ENABLED=0 go build -v -ldflags='-s -w' -trimpath ./cmd/cstock
+
+.PHONY: install
+install: build
+	sudo mv cstock /usr/local/bin
+

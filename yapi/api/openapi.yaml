@@ -331,9 +331,7 @@ components:
           fmt: 1.18%
         quoteType: INDEX
         uuid: 8ffd55d1-3d1d-3733-a480-56768bc708e6
-        regularMarketDayRange:
-          raw: 3992.78 - 4020.63
-          fmt: 3992.78 - 4020.63
+        regularMarketDayRange: 3992.78 - 4020.63
         fiftyTwoWeekLowChange:
           raw: 1445.3
           fmt: "1445.3"
@@ -348,9 +346,7 @@ components:
         fiftyTwoWeekHigh:
           raw: 4020.63
           fmt: "4020.63"
-        regularMarketPreviousClose:
-          raw: 3972.89
-          fmt: "3972.89"
+        regularMarketPreviousClose: 3972.89
         exchangeTimezoneName: America/New_York
         fiftyTwoWeekHighChange:
           raw: -0.7597656
@@ -370,10 +366,7 @@ components:
           fmt: "2574.57"
         regularMarketPrice: 2574.57
         market: us_market
-        regularMarketVolume:
-          raw: 2165457735
-          longFmt: "2165457735"
-          fmt: 2.165B
+        regularMarketVolume: 143.96
         quoteSourceName: Delayed Quote
         messageBoardId: finmb_INDEXGSPC
         priceHint: 2
@@ -414,7 +407,8 @@ components:
           example: 8ffd55d1-3d1d-3733-a480-56768bc708e6
           type: string
         regularMarketDayRange:
-          $ref: '#/components/schemas/QuoteResult_regularMarketDayRange'
+          example: 3992.78 - 4020.63
+          type: string
         fiftyTwoWeekLowChange:
           $ref: '#/components/schemas/QuoteResult_fiftyTwoWeekLowChange'
         fiftyTwoWeekHighChangePercent:
@@ -429,7 +423,8 @@ components:
         fiftyTwoWeekHigh:
           $ref: '#/components/schemas/QuoteResult_regularMarketDayHigh'
         regularMarketPreviousClose:
-          $ref: '#/components/schemas/QuoteResult_regularMarketPreviousClose'
+          example: 3972.89
+          type: number
         exchangeTimezoneName:
           example: America/New_York
           type: string
@@ -461,7 +456,8 @@ components:
           example: us_market
           type: string
         regularMarketVolume:
-          $ref: '#/components/schemas/QuoteResult_regularMarketVolume'
+          example: 143.96
+          type: number
         quoteSourceName:
           example: Delayed Quote
           type: string
@@ -512,9 +508,7 @@ components:
               fmt: 1.18%
             quoteType: INDEX
             uuid: 8ffd55d1-3d1d-3733-a480-56768bc708e6
-            regularMarketDayRange:
-              raw: 3992.78 - 4020.63
-              fmt: 3992.78 - 4020.63
+            regularMarketDayRange: 3992.78 - 4020.63
             fiftyTwoWeekLowChange:
               raw: 1445.3
               fmt: "1445.3"
@@ -529,9 +523,7 @@ components:
             fiftyTwoWeekHigh:
               raw: 4020.63
               fmt: "4020.63"
-            regularMarketPreviousClose:
-              raw: 3972.89
-              fmt: "3972.89"
+            regularMarketPreviousClose: 3972.89
             exchangeTimezoneName: America/New_York
             fiftyTwoWeekHighChange:
               raw: -0.7597656
@@ -551,10 +543,7 @@ components:
               fmt: "2574.57"
             regularMarketPrice: 2574.57
             market: us_market
-            regularMarketVolume:
-              raw: 2165457735
-              longFmt: "2165457735"
-              fmt: 2.165B
+            regularMarketVolume: 143.96
             quoteSourceName: Delayed Quote
             messageBoardId: finmb_INDEXGSPC
             priceHint: 2
@@ -584,9 +573,7 @@ components:
               fmt: 1.18%
             quoteType: INDEX
             uuid: 8ffd55d1-3d1d-3733-a480-56768bc708e6
-            regularMarketDayRange:
-              raw: 3992.78 - 4020.63
-              fmt: 3992.78 - 4020.63
+            regularMarketDayRange: 3992.78 - 4020.63
             fiftyTwoWeekLowChange:
               raw: 1445.3
               fmt: "1445.3"
@@ -601,9 +588,7 @@ components:
             fiftyTwoWeekHigh:
               raw: 4020.63
               fmt: "4020.63"
-            regularMarketPreviousClose:
-              raw: 3972.89
-              fmt: "3972.89"
+            regularMarketPreviousClose: 3972.89
             exchangeTimezoneName: America/New_York
             fiftyTwoWeekHighChange:
               raw: -0.7597656
@@ -623,10 +608,7 @@ components:
               fmt: "2574.57"
             regularMarketPrice: 2574.57
             market: us_market
-            regularMarketVolume:
-              raw: 2165457735
-              longFmt: "2165457735"
-              fmt: 2.165B
+            regularMarketVolume: 143.96
             quoteSourceName: Delayed Quote
             messageBoardId: finmb_INDEXGSPC
             priceHint: 2
@@ -866,18 +848,6 @@ components:
           example: 1.18%
           type: string
       type: object
-    QuoteResult_regularMarketDayRange:
-      example:
-        raw: 3992.78 - 4020.63
-        fmt: 3992.78 - 4020.63
-      properties:
-        raw:
-          example: 3992.78 - 4020.63
-          type: string
-        fmt:
-          example: 3992.78 - 4020.63
-          type: string
-      type: object
     QuoteResult_fiftyTwoWeekLowChange:
       example:
         raw: 1445.3
@@ -912,18 +882,6 @@ components:
           type: number
         fmt:
           example: "4020.63"
-          type: string
-      type: object
-    QuoteResult_regularMarketPreviousClose:
-      example:
-        raw: 3972.89
-        fmt: "3972.89"
-      properties:
-        raw:
-          example: 3972.89
-          type: number
-        fmt:
-          example: "3972.89"
           type: string
       type: object
     QuoteResult_fiftyTwoWeekHighChange:
@@ -974,23 +932,6 @@ components:
           example: "2574.57"
           type: string
       type: object
-    QuoteResult_regularMarketVolume:
-      example:
-        raw: 2165457735
-        longFmt: "2165457735"
-        fmt: 2.165B
-      properties:
-        raw:
-          example: 2165457735
-          format: int64
-          type: integer
-        fmt:
-          example: 2.165B
-          type: string
-        longFmt:
-          example: "2165457735"
-          type: string
-      type: object
     QuoteResult_regularMarketDayLow:
       example:
         raw: 3993.78
@@ -1024,9 +965,7 @@ components:
             fmt: 1.18%
           quoteType: INDEX
           uuid: 8ffd55d1-3d1d-3733-a480-56768bc708e6
-          regularMarketDayRange:
-            raw: 3992.78 - 4020.63
-            fmt: 3992.78 - 4020.63
+          regularMarketDayRange: 3992.78 - 4020.63
           fiftyTwoWeekLowChange:
             raw: 1445.3
             fmt: "1445.3"
@@ -1041,9 +980,7 @@ components:
           fiftyTwoWeekHigh:
             raw: 4020.63
             fmt: "4020.63"
-          regularMarketPreviousClose:
-            raw: 3972.89
-            fmt: "3972.89"
+          regularMarketPreviousClose: 3972.89
           exchangeTimezoneName: America/New_York
           fiftyTwoWeekHighChange:
             raw: -0.7597656
@@ -1063,10 +1000,7 @@ components:
             fmt: "2574.57"
           regularMarketPrice: 2574.57
           market: us_market
-          regularMarketVolume:
-            raw: 2165457735
-            longFmt: "2165457735"
-            fmt: 2.165B
+          regularMarketVolume: 143.96
           quoteSourceName: Delayed Quote
           messageBoardId: finmb_INDEXGSPC
           priceHint: 2
@@ -1096,9 +1030,7 @@ components:
             fmt: 1.18%
           quoteType: INDEX
           uuid: 8ffd55d1-3d1d-3733-a480-56768bc708e6
-          regularMarketDayRange:
-            raw: 3992.78 - 4020.63
-            fmt: 3992.78 - 4020.63
+          regularMarketDayRange: 3992.78 - 4020.63
           fiftyTwoWeekLowChange:
             raw: 1445.3
             fmt: "1445.3"
@@ -1113,9 +1045,7 @@ components:
           fiftyTwoWeekHigh:
             raw: 4020.63
             fmt: "4020.63"
-          regularMarketPreviousClose:
-            raw: 3972.89
-            fmt: "3972.89"
+          regularMarketPreviousClose: 3972.89
           exchangeTimezoneName: America/New_York
           fiftyTwoWeekHighChange:
             raw: -0.7597656
@@ -1135,10 +1065,7 @@ components:
             fmt: "2574.57"
           regularMarketPrice: 2574.57
           market: us_market
-          regularMarketVolume:
-            raw: 2165457735
-            longFmt: "2165457735"
-            fmt: 2.165B
+          regularMarketVolume: 143.96
           quoteSourceName: Delayed Quote
           messageBoardId: finmb_INDEXGSPC
           priceHint: 2

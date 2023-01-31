@@ -26,14 +26,14 @@ type QuoteResult struct {
 	RegularMarketChangePercent *QuoteResultRegularMarketChangePercent `json:"regularMarketChangePercent,omitempty"`
 	QuoteType *string `json:"quoteType,omitempty"`
 	Uuid *string `json:"uuid,omitempty"`
-	RegularMarketDayRange *QuoteResultRegularMarketDayRange `json:"regularMarketDayRange,omitempty"`
+	RegularMarketDayRange *string `json:"regularMarketDayRange,omitempty"`
 	FiftyTwoWeekLowChange *QuoteResultFiftyTwoWeekLowChange `json:"fiftyTwoWeekLowChange,omitempty"`
 	FiftyTwoWeekHighChangePercent *QuoteResultFiftyTwoWeekHighChangePercent `json:"fiftyTwoWeekHighChangePercent,omitempty"`
 	RegularMarketDayHigh *QuoteResultRegularMarketDayHigh `json:"regularMarketDayHigh,omitempty"`
 	Tradeable *bool `json:"tradeable,omitempty"`
 	Currency *string `json:"currency,omitempty"`
 	FiftyTwoWeekHigh *QuoteResultRegularMarketDayHigh `json:"fiftyTwoWeekHigh,omitempty"`
-	RegularMarketPreviousClose *QuoteResultRegularMarketPreviousClose `json:"regularMarketPreviousClose,omitempty"`
+	RegularMarketPreviousClose *float32 `json:"regularMarketPreviousClose,omitempty"`
 	ExchangeTimezoneName *string `json:"exchangeTimezoneName,omitempty"`
 	FiftyTwoWeekHighChange *QuoteResultFiftyTwoWeekHighChange `json:"fiftyTwoWeekHighChange,omitempty"`
 	RegularMarketChange *QuoteResultRegularMarketChange `json:"regularMarketChange,omitempty"`
@@ -45,7 +45,7 @@ type QuoteResult struct {
 	FiftyTwoWeekLow *QuoteResultFiftyTwoWeekLow `json:"fiftyTwoWeekLow,omitempty"`
 	RegularMarketPrice *float32 `json:"regularMarketPrice,omitempty"`
 	Market *string `json:"market,omitempty"`
-	RegularMarketVolume *QuoteResultRegularMarketVolume `json:"regularMarketVolume,omitempty"`
+	RegularMarketVolume *float32 `json:"regularMarketVolume,omitempty"`
 	QuoteSourceName *string `json:"quoteSourceName,omitempty"`
 	MessageBoardId *string `json:"messageBoardId,omitempty"`
 	PriceHint *int32 `json:"priceHint,omitempty"`
@@ -395,9 +395,9 @@ func (o *QuoteResult) SetUuid(v string) {
 }
 
 // GetRegularMarketDayRange returns the RegularMarketDayRange field value if set, zero value otherwise.
-func (o *QuoteResult) GetRegularMarketDayRange() QuoteResultRegularMarketDayRange {
+func (o *QuoteResult) GetRegularMarketDayRange() string {
 	if o == nil || o.RegularMarketDayRange == nil {
-		var ret QuoteResultRegularMarketDayRange
+		var ret string
 		return ret
 	}
 	return *o.RegularMarketDayRange
@@ -405,7 +405,7 @@ func (o *QuoteResult) GetRegularMarketDayRange() QuoteResultRegularMarketDayRang
 
 // GetRegularMarketDayRangeOk returns a tuple with the RegularMarketDayRange field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *QuoteResult) GetRegularMarketDayRangeOk() (*QuoteResultRegularMarketDayRange, bool) {
+func (o *QuoteResult) GetRegularMarketDayRangeOk() (*string, bool) {
 	if o == nil || o.RegularMarketDayRange == nil {
 		return nil, false
 	}
@@ -421,8 +421,8 @@ func (o *QuoteResult) HasRegularMarketDayRange() bool {
 	return false
 }
 
-// SetRegularMarketDayRange gets a reference to the given QuoteResultRegularMarketDayRange and assigns it to the RegularMarketDayRange field.
-func (o *QuoteResult) SetRegularMarketDayRange(v QuoteResultRegularMarketDayRange) {
+// SetRegularMarketDayRange gets a reference to the given string and assigns it to the RegularMarketDayRange field.
+func (o *QuoteResult) SetRegularMarketDayRange(v string) {
 	o.RegularMarketDayRange = &v
 }
 
@@ -619,9 +619,9 @@ func (o *QuoteResult) SetFiftyTwoWeekHigh(v QuoteResultRegularMarketDayHigh) {
 }
 
 // GetRegularMarketPreviousClose returns the RegularMarketPreviousClose field value if set, zero value otherwise.
-func (o *QuoteResult) GetRegularMarketPreviousClose() QuoteResultRegularMarketPreviousClose {
+func (o *QuoteResult) GetRegularMarketPreviousClose() float32 {
 	if o == nil || o.RegularMarketPreviousClose == nil {
-		var ret QuoteResultRegularMarketPreviousClose
+		var ret float32
 		return ret
 	}
 	return *o.RegularMarketPreviousClose
@@ -629,7 +629,7 @@ func (o *QuoteResult) GetRegularMarketPreviousClose() QuoteResultRegularMarketPr
 
 // GetRegularMarketPreviousCloseOk returns a tuple with the RegularMarketPreviousClose field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *QuoteResult) GetRegularMarketPreviousCloseOk() (*QuoteResultRegularMarketPreviousClose, bool) {
+func (o *QuoteResult) GetRegularMarketPreviousCloseOk() (*float32, bool) {
 	if o == nil || o.RegularMarketPreviousClose == nil {
 		return nil, false
 	}
@@ -645,8 +645,8 @@ func (o *QuoteResult) HasRegularMarketPreviousClose() bool {
 	return false
 }
 
-// SetRegularMarketPreviousClose gets a reference to the given QuoteResultRegularMarketPreviousClose and assigns it to the RegularMarketPreviousClose field.
-func (o *QuoteResult) SetRegularMarketPreviousClose(v QuoteResultRegularMarketPreviousClose) {
+// SetRegularMarketPreviousClose gets a reference to the given float32 and assigns it to the RegularMarketPreviousClose field.
+func (o *QuoteResult) SetRegularMarketPreviousClose(v float32) {
 	o.RegularMarketPreviousClose = &v
 }
 
@@ -1003,9 +1003,9 @@ func (o *QuoteResult) SetMarket(v string) {
 }
 
 // GetRegularMarketVolume returns the RegularMarketVolume field value if set, zero value otherwise.
-func (o *QuoteResult) GetRegularMarketVolume() QuoteResultRegularMarketVolume {
+func (o *QuoteResult) GetRegularMarketVolume() float32 {
 	if o == nil || o.RegularMarketVolume == nil {
-		var ret QuoteResultRegularMarketVolume
+		var ret float32
 		return ret
 	}
 	return *o.RegularMarketVolume
@@ -1013,7 +1013,7 @@ func (o *QuoteResult) GetRegularMarketVolume() QuoteResultRegularMarketVolume {
 
 // GetRegularMarketVolumeOk returns a tuple with the RegularMarketVolume field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *QuoteResult) GetRegularMarketVolumeOk() (*QuoteResultRegularMarketVolume, bool) {
+func (o *QuoteResult) GetRegularMarketVolumeOk() (*float32, bool) {
 	if o == nil || o.RegularMarketVolume == nil {
 		return nil, false
 	}
@@ -1029,8 +1029,8 @@ func (o *QuoteResult) HasRegularMarketVolume() bool {
 	return false
 }
 
-// SetRegularMarketVolume gets a reference to the given QuoteResultRegularMarketVolume and assigns it to the RegularMarketVolume field.
-func (o *QuoteResult) SetRegularMarketVolume(v QuoteResultRegularMarketVolume) {
+// SetRegularMarketVolume gets a reference to the given float32 and assigns it to the RegularMarketVolume field.
+func (o *QuoteResult) SetRegularMarketVolume(v float32) {
 	o.RegularMarketVolume = &v
 }
 

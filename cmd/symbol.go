@@ -11,7 +11,7 @@ import (
 
 // symbolCmd represents the symbol command
 var symbolCmd = &cobra.Command{
-	Use:              "cv [no options!]",
+	Use:              "quote [no options!]",
 	TraverseChildren: true,
 	Short:            "A brief description of your command",
 	Long: `A longer description that spans multiple lines and likely contains examples

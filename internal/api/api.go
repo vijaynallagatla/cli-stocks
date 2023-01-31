@@ -15,10 +15,12 @@ func GetQuoteForSymbol(client *cli.APIClient, symbol *string) error {
 	columns := []table.Column{
 		{Title: "Stock Name", Width: 30},
 		{Title: "Stock Value", Width: 20},
+		{Title: "Previous Close", Width: 20},
+		{Title: "Day Range", Width: 20},
 	}
 
 	rows := []table.Row{
-		{quote.name, quote.currentValue},
+		{quote.name, quote.currentValue, fmt.Sprintf("%v", quote.previousDayClose), quote.regularMarketDayRange},
 	}
 
 	// Send the UI for rendering
@@ -35,6 +37,7 @@ func GetQuoteForSymbol(client *cli.APIClient, symbol *string) error {
 		fmt.Printf("Alas, there's been an error: %v", err)
 		os.Exit(1)
 	}
+
 	return nil
 }
 
@@ -54,8 +57,10 @@ func quoteForSymbol(client *cli.APIClient, symbol *string) stock {
 
 	if len(quote.GetResult()) > 0 {
 		return stock{
-			name:         quote.GetResult()[0].GetShortName(),
-			currentValue: fmt.Sprintf("%f", quote.GetResult()[0].GetRegularMarketPrice()),
+			name:                  quote.GetResult()[0].GetShortName(),
+			currentValue:          fmt.Sprintf("%f", quote.GetResult()[0].GetRegularMarketPrice()),
+			regularMarketDayRange: quote.GetResult()[0].GetRegularMarketDayRange(),
+			previousDayClose:      quote.GetResult()[0].GetRegularMarketPreviousClose(),
 		}
 	}
 

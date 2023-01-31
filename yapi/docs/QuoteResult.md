@@ -14,14 +14,14 @@ Name | Type | Description | Notes
 **RegularMarketChangePercent** | Pointer to [**QuoteResultRegularMarketChangePercent**](QuoteResultRegularMarketChangePercent.md) |  | [optional] 
 **QuoteType** | Pointer to **string** |  | [optional] 
 **Uuid** | Pointer to **string** |  | [optional] 
-**RegularMarketDayRange** | Pointer to [**QuoteResultRegularMarketDayRange**](QuoteResultRegularMarketDayRange.md) |  | [optional] 
+**RegularMarketDayRange** | Pointer to **string** |  | [optional] 
 **FiftyTwoWeekLowChange** | Pointer to [**QuoteResultFiftyTwoWeekLowChange**](QuoteResultFiftyTwoWeekLowChange.md) |  | [optional] 
 **FiftyTwoWeekHighChangePercent** | Pointer to [**QuoteResultFiftyTwoWeekHighChangePercent**](QuoteResultFiftyTwoWeekHighChangePercent.md) |  | [optional] 
 **RegularMarketDayHigh** | Pointer to [**QuoteResultRegularMarketDayHigh**](QuoteResultRegularMarketDayHigh.md) |  | [optional] 
 **Tradeable** | Pointer to **bool** |  | [optional] 
 **Currency** | Pointer to **string** |  | [optional] 
 **FiftyTwoWeekHigh** | Pointer to [**QuoteResultRegularMarketDayHigh**](QuoteResultRegularMarketDayHigh.md) |  | [optional] 
-**RegularMarketPreviousClose** | Pointer to [**QuoteResultRegularMarketPreviousClose**](QuoteResultRegularMarketPreviousClose.md) |  | [optional] 
+**RegularMarketPreviousClose** | Pointer to **float32** |  | [optional] 
 **ExchangeTimezoneName** | Pointer to **string** |  | [optional] 
 **FiftyTwoWeekHighChange** | Pointer to [**QuoteResultFiftyTwoWeekHighChange**](QuoteResultFiftyTwoWeekHighChange.md) |  | [optional] 
 **RegularMarketChange** | Pointer to [**QuoteResultRegularMarketChange**](QuoteResultRegularMarketChange.md) |  | [optional] 
@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 **FiftyTwoWeekLow** | Pointer to [**QuoteResultFiftyTwoWeekLow**](QuoteResultFiftyTwoWeekLow.md) |  | [optional] 
 **RegularMarketPrice** | Pointer to **float32** |  | [optional] 
 **Market** | Pointer to **string** |  | [optional] 
-**RegularMarketVolume** | Pointer to [**QuoteResultRegularMarketVolume**](QuoteResultRegularMarketVolume.md) |  | [optional] 
+**RegularMarketVolume** | Pointer to **float32** |  | [optional] 
 **QuoteSourceName** | Pointer to **string** |  | [optional] 
 **MessageBoardId** | Pointer to **string** |  | [optional] 
 **PriceHint** | Pointer to **int32** |  | [optional] 
@@ -315,20 +315,20 @@ HasUuid returns a boolean if a field has been set.
 
 ### GetRegularMarketDayRange
 
-`func (o *QuoteResult) GetRegularMarketDayRange() QuoteResultRegularMarketDayRange`
+`func (o *QuoteResult) GetRegularMarketDayRange() string`
 
 GetRegularMarketDayRange returns the RegularMarketDayRange field if non-nil, zero value otherwise.
 
 ### GetRegularMarketDayRangeOk
 
-`func (o *QuoteResult) GetRegularMarketDayRangeOk() (*QuoteResultRegularMarketDayRange, bool)`
+`func (o *QuoteResult) GetRegularMarketDayRangeOk() (*string, bool)`
 
 GetRegularMarketDayRangeOk returns a tuple with the RegularMarketDayRange field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRegularMarketDayRange
 
-`func (o *QuoteResult) SetRegularMarketDayRange(v QuoteResultRegularMarketDayRange)`
+`func (o *QuoteResult) SetRegularMarketDayRange(v string)`
 
 SetRegularMarketDayRange sets RegularMarketDayRange field to given value.
 
@@ -490,20 +490,20 @@ HasFiftyTwoWeekHigh returns a boolean if a field has been set.
 
 ### GetRegularMarketPreviousClose
 
-`func (o *QuoteResult) GetRegularMarketPreviousClose() QuoteResultRegularMarketPreviousClose`
+`func (o *QuoteResult) GetRegularMarketPreviousClose() float32`
 
 GetRegularMarketPreviousClose returns the RegularMarketPreviousClose field if non-nil, zero value otherwise.
 
 ### GetRegularMarketPreviousCloseOk
 
-`func (o *QuoteResult) GetRegularMarketPreviousCloseOk() (*QuoteResultRegularMarketPreviousClose, bool)`
+`func (o *QuoteResult) GetRegularMarketPreviousCloseOk() (*float32, bool)`
 
 GetRegularMarketPreviousCloseOk returns a tuple with the RegularMarketPreviousClose field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRegularMarketPreviousClose
 
-`func (o *QuoteResult) SetRegularMarketPreviousClose(v QuoteResultRegularMarketPreviousClose)`
+`func (o *QuoteResult) SetRegularMarketPreviousClose(v float32)`
 
 SetRegularMarketPreviousClose sets RegularMarketPreviousClose field to given value.
 
@@ -790,20 +790,20 @@ HasMarket returns a boolean if a field has been set.
 
 ### GetRegularMarketVolume
 
-`func (o *QuoteResult) GetRegularMarketVolume() QuoteResultRegularMarketVolume`
+`func (o *QuoteResult) GetRegularMarketVolume() float32`
 
 GetRegularMarketVolume returns the RegularMarketVolume field if non-nil, zero value otherwise.
 
 ### GetRegularMarketVolumeOk
 
-`func (o *QuoteResult) GetRegularMarketVolumeOk() (*QuoteResultRegularMarketVolume, bool)`
+`func (o *QuoteResult) GetRegularMarketVolumeOk() (*float32, bool)`
 
 GetRegularMarketVolumeOk returns a tuple with the RegularMarketVolume field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRegularMarketVolume
 
-`func (o *QuoteResult) SetRegularMarketVolume(v QuoteResultRegularMarketVolume)`
+`func (o *QuoteResult) SetRegularMarketVolume(v float32)`
 
 SetRegularMarketVolume sets RegularMarketVolume field to given value.
 

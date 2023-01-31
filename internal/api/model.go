@@ -15,8 +15,11 @@ type model struct {
 }
 
 type stock struct {
-	name         string
-	currentValue string
+	name                  string
+	currentValue          string
+	currency              string
+	previousDayClose      float32
+	regularMarketDayRange string
 }
 type keymap struct {
 	stop key.Binding
@@ -27,4 +30,15 @@ type search struct {
 	// Exact Symbol match search for quotation
 	symbol *string
 	name   *string
+}
+
+type Track struct {
+	command   string
+	Flag      string
+	FlagValue string
+}
+
+var tracks = []Track{
+	{"quote", "--s", "AAPL"},
+	{"quote", "--s", "GOOG"},
 }

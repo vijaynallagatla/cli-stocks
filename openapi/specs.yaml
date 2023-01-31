@@ -297,14 +297,8 @@ components:
           type: string
           example: 8ffd55d1-3d1d-3733-a480-56768bc708e6
         regularMarketDayRange:
-          type: object
-          properties:
-            raw:
-              type: string
-              example: 3992.78 - 4020.63
-            fmt:
-              type: string
-              example: 3992.78 - 4020.63
+          type: string
+          example: 3992.78 - 4020.63
         fiftyTwoWeekLowChange:
           type: object
           properties:
@@ -347,14 +341,8 @@ components:
               type: string
               example: '4020.63'
         regularMarketPreviousClose:
-          type: object
-          properties:
-            raw:
-              type: number
-              example: 3972.89
-            fmt:
-              type: string
-              example: '3972.89'
+          type: number
+          example: 3972.89
         exchangeTimezoneName:
           type: string
           example: America/New_York
@@ -415,18 +403,8 @@ components:
           type: string
           example: us_market
         regularMarketVolume:
-          type: object
-          properties:
-            raw:
-              type: integer
-              format: int64
-              example: 2165457735
-            fmt:
-              type: string
-              example: 2.165B
-            longFmt:
-              type: string
-              example: '2165457735'
+          type: number
+          example: 143.96
         quoteSourceName:
           type: string
           example: Delayed Quote

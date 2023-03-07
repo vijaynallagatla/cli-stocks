@@ -9,8 +9,16 @@
   "labels": ["renovate", "dependencies"],
   "packageRules": [
     {
-      "matchUpdateTypes": ["major","minor", "patch", "pin", "digest"],
-      "automerge": true
+      "automerge": true,
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
     }
   ],
   "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"],
@@ -19,5 +27,7 @@
   "gomod": {
     "enabled": true
   },
-  "rangeStrategy": "pin"
+  "docker": {
+    "enabled": false
+  }
 }

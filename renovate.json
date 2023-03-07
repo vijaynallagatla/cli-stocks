@@ -9,6 +9,13 @@
   "labels": ["renovate", "dependencies"],
   "packageRules": [
     {
+      "description": "Trigger breaking release for major updates",
+      "matchPackageNames": ["*"],
+      "matchUpdateTypes": ["major"],
+      "semanticCommitType": "feat",
+      "commitBody": "BREAKING CHANGE: Major update"
+    },
+    {
       "automerge": true,
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch",

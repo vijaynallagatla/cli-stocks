@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/charmbracelet/bubbles v0.15.0
 	github.com/charmbracelet/bubbletea v0.23.1
-	github.com/charmbracelet/lipgloss v0.6.0
+	github.com/charmbracelet/lipgloss/v2 v2.0.6
 	github.com/spf13/cobra v1.6.1
 	github.com/vijaynallagatla/cli-stocks/yapi v0.0.0
 )
